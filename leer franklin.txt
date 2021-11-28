@@ -1,0 +1,8 @@
+https://demos.creative-tim.com/light-bootstrap-dashboard-react/#/admin/dashboard
+
+usa node js 14.18.1
+
+ "bootstrap": "4.6.0",
+
+Plantilla auxiliar
+https://startbootstrap.com/previews/sb-admin

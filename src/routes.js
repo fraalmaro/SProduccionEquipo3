@@ -25,25 +25,46 @@ import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
 
 const dashboardRoutes = [
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-alien-33",
-    component: Upgrade,
-    layout: "/admin",
-  },
+  
   {
     path: "/dashboard",
-    name: "Dashboard",
-    icon: "nc-icon nc-chart-pie-35",
+    name: "Inicio",
+    icon: "nc-icon nc-sun-fog-29",
     component: Dashboard,
     layout: "/admin",
   },
   {
     path: "/user",
-    name: "User Profile",
+    name: "Usuarios",
     icon: "nc-icon nc-circle-09",
+    component: UserProfile,
+    layout: "/admin",
+  },
+  {
+    path: "/productos",
+    name: "Productos",
+    icon: "nc-icon nc-bag",
+    component: UserProfile,
+    layout: "/admin",
+  },
+  {
+    path: "/ordenes",
+    name: "Ordenes Producción",
+    icon: "nc-icon nc-bullet-list-67",
+    component: UserProfile,
+    layout: "/admin",
+  },
+  {
+    path: "/materiasprimas",
+    name: "Materias Primas",
+    icon: "nc-icon nc-grid-45",
+    component: UserProfile,
+    layout: "/admin",
+  },
+  {
+    path: "/reportes",
+    name: "Reportes",
+    icon: "nc-icon nc-single-copy-04",
     component: UserProfile,
     layout: "/admin",
   },

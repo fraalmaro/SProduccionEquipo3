@@ -25,14 +25,14 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import sidebarImage from "assets/img/sidebar-3.jpg";
+import sidebarImage from "assets/img/sidebar-6.jpg";
 
 function Admin() { // se construye por pedazo la vista del admin. ESTE ES UN COMPONENTE 
   //cada const es como un minicomponente XD, como atributo(una variable de tipo constante en su tipo de dato), a los cuales se les da un nombre
   // el const es como una manera de tomar a uno de los componentes importados y se identifica cual es el que se llama, por los nombres de los parametros que se modifican.
   // dos variables utilizando array destructuring 
   const [image, setImage] = React.useState(sidebarImage); // se le otorga un estado inicial, asignandole un valor inicial con usestate a este atributo de la funcion
-  const [color, setColor] = React.useState("black");//todos son hooks
+  const [color, setColor] = React.useState("blue");//todos son hooks
   const [hasImage, setHasImage] = React.useState(true);
   //En primer lugar, declaramos dos variables utilizando array destructuring:
   // la primera, hasImage, representa el estado del componente; 

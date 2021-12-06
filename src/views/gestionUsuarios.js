@@ -28,18 +28,18 @@ function User() {
                   <Row>
                     <Col className="pr-1" md="5">
                       <Form.Group>
-                        <label>Compañia</label>
+                        <label>Company (disabled)</label>
                         <Form.Control
-                          defaultValue="Postobón"
+                          defaultValue="Creative Code Inc."
                           disabled
-                          placeholder="Postobón"
+                          placeholder="Company"
                           type="text"
                         ></Form.Control>
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
                       <Form.Group>
-                        <label>Nombre de Usuario</label>
+                        <label>Username</label>
                         <Form.Control
                           defaultValue="michael23"
                           placeholder="Username"
@@ -50,7 +50,7 @@ function User() {
                     <Col className="pl-1" md="4">
                       <Form.Group>
                         <label htmlFor="exampleInputEmail1">
-                          Email
+                          Email address
                         </label>
                         <Form.Control
                           placeholder="Email"
@@ -62,7 +62,7 @@ function User() {
                   <Row>
                     <Col className="pr-1" md="6">
                       <Form.Group>
-                        <label>Nombres</label>
+                        <label>First Name</label>
                         <Form.Control
                           defaultValue="Mike"
                           placeholder="Company"
@@ -72,7 +72,7 @@ function User() {
                     </Col>
                     <Col className="pl-1" md="6">
                       <Form.Group>
-                        <label>Apellidos</label>
+                        <label>Last Name</label>
                         <Form.Control
                           defaultValue="Andrew"
                           placeholder="Last Name"
@@ -84,7 +84,7 @@ function User() {
                   <Row>
                     <Col md="12">
                       <Form.Group>
-                        <label>Dirección</label>
+                        <label>Address</label>
                         <Form.Control
                           defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
                           placeholder="Home Address"
@@ -96,7 +96,7 @@ function User() {
                   <Row>
                     <Col className="pr-1" md="4">
                       <Form.Group>
-                        <label>Ciudad</label>
+                        <label>City</label>
                         <Form.Control
                           defaultValue="Mike"
                           placeholder="City"
@@ -106,7 +106,7 @@ function User() {
                     </Col>
                     <Col className="px-1" md="4">
                       <Form.Group>
-                        <label>Pais</label>
+                        <label>Country</label>
                         <Form.Control
                           defaultValue="Andrew"
                           placeholder="Country"
@@ -116,7 +116,7 @@ function User() {
                     </Col>
                     <Col className="pl-1" md="4">
                       <Form.Group>
-                        <label>Codigo Postal</label>
+                        <label>Postal Code</label>
                         <Form.Control
                           placeholder="ZIP Code"
                           type="number"
@@ -127,14 +127,14 @@ function User() {
                   <Row>
                     <Col md="12">
                       <Form.Group>
-                        <label>Rol</label>
+                        <label>About Me</label>
                         <Form.Control
-                          cols="50"
+                          cols="80"
                           defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in
                           that two seat Lambo."
                           placeholder="Here can be your description"
                           rows="4"
-                          type="text"
+                          as="textarea"
                         ></Form.Control>
                       </Form.Group>
                     </Col>
@@ -164,13 +164,49 @@ function User() {
               </div>
               <Card.Body>
                 <div className="author">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
                     <img
                       alt="..."
                       className="avatar border-gray"
                       src={require("assets/img/faces/face-3.jpg").default}
                     ></img>
+                    <h5 className="title">Mike Andrew</h5>
+                  </a>
+                  <p className="description">michael24</p>
                 </div>
+                <p className="description text-center">
+                  "Lamborghini Mercy <br></br>
+                  Your chick she so thirsty <br></br>
+                  I'm in that two seat Lambo"
+                </p>
               </Card.Body>
+              <hr></hr>
+              <div className="button-container mr-auto ml-auto">
+                <Button
+                  className="btn-simple btn-icon"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="link"
+                >
+                  <i className="fab fa-facebook-square"></i>
+                </Button>
+                <Button
+                  className="btn-simple btn-icon"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="link"
+                >
+                  <i className="fab fa-twitter"></i>
+                </Button>
+                <Button
+                  className="btn-simple btn-icon"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="link"
+                >
+                  <i className="fab fa-google-plus-square"></i>
+                </Button>
+              </div>
             </Card>
           </Col>
         </Row>

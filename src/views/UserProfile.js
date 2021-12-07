@@ -1,16 +1,8 @@
 import React from "react";
 
+
 // react-bootstrap components
-import {
-  Badge,
-  Button,
-  Card,
-  Form,
-  Navbar,
-  Nav,
-  Container,
-  Row,
-  Col,
+import { Badge, Button, Card, Form, Navbar, Nav, Container, Row, Col, Dropdown
 } from "react-bootstrap";
 
 function User() {
@@ -21,7 +13,7 @@ function User() {
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Edit Profile</Card.Title>
+                <Card.Title as="h4">Edición de Usuario</Card.Title>
               </Card.Header>
               <Card.Body>
                 <Form>
@@ -128,14 +120,36 @@ function User() {
                     <Col md="12">
                       <Form.Group>
                         <label>Rol</label>
-                        <Form.Control
-                          cols="50"
-                          defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in
-                          that two seat Lambo."
-                          placeholder="Here can be your description"
-                          rows="4"
-                          type="text"
-                        ></Form.Control>
+                        
+                        <Dropdown as={Nav.Item}>
+                            <Dropdown.Toggle
+                              aria-expanded={false}
+                              aria-haspopup={true}
+                              as={Nav.Link}
+                              data-toggle="dropdown"
+                              id="navbarDropdownMenuLink"
+                              variant="default"
+                              className="m-0"
+                            >
+                              <span className="no-icon">Usuario de Inventario</span>
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu aria-labelledby="navbarDropdownMenuLink">
+                              <Dropdown.Item
+                                href="#pablo"
+                                onClick={(e) => e.preventDefault()}
+                              >
+                                Administrador
+                              </Dropdown.Item>
+                              <Dropdown.Item
+                                href="#pablo"
+                                onClick={(e) => e.preventDefault()}
+                              >
+                                Usuario de Producción
+                              </Dropdown.Item>
+                              
+                            </Dropdown.Menu>
+                          </Dropdown>
+
                       </Form.Group>
                     </Col>
                   </Row>
@@ -144,7 +158,7 @@ function User() {
                     type="submit"
                     variant="info"
                   >
-                    Update Profile
+                    Guardar
                   </Button>
                   <div className="clearfix"></div>
                 </Form>
@@ -169,6 +183,13 @@ function User() {
                       className="avatar border-gray"
                       src={require("assets/img/faces/face-3.jpg").default}
                     ></img>
+                  <hr></hr>
+                  <div className="button-container mr-auto ml-auto">
+                  
+                  <Button className="btn-fill pull-right" type="submit" variant="info">
+                      Cambiar foto
+                  </Button>
+                  </div>
                 </div>
               </Card.Body>
             </Card>

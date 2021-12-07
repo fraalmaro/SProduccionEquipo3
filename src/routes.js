@@ -28,6 +28,7 @@ import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
 import { Collapse } from "react-bootstrap";
+import Submenu from "routes.js";
 
 const dashboardRoutes = [
   
@@ -39,37 +40,45 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
+    path: "/administrarUsuarios",
+    name: "Gestión Usuarios",
+    icon: "nc-icon nc-single-02",
+    component: administrarUsuarios,
+    layout: "/admin",
+  },
+  {
     path: "/user",
-    name: "Usuarios",
+    name: "Mi Perfil",
     icon: "nc-icon nc-circle-09",
     component: UserProfile,
     layout: "/admin",
-    iconClosed:"nc-icon nc-stre-up",
-    iconOpened:"nc-icon nc-stre-down",
-    subnav: [
-      {
-        path: "/user",
-        name: "Crear Usuario",
-        icon: "nc-icon nc-simple-add",
-      },
-      {
-        path: "/user",
-        name: "Administrar Usuarios",
-        icon: "nc-icon nc-ruler-pencil",
-      },
-    ]
     
   },
+   
   {
-    path: "/productos",
-    name: "Productos",
+    path: "/administrarConfigProductos",
+    name: "Gestión Productos",
     icon: "nc-icon nc-bag",
-    component: UserProfile,
+    component: administrarConfigProductos,
+    layout: "/admin",
+  },
+  {
+    path: "/CrearConfiguracion",
+    name: "Crear Producto",
+    icon: "nc-icon nc-ruler-pencil",
+    component: CrearConfiguracion,
+    layout: "/admin",
+  },
+  {
+    path: "/admOrdenesProduccion",
+    name: "Gestión de Ordenes ",
+    icon: "nc-icon nc-bullet-list-67",
+    component: admOrdenesProduccion,
     layout: "/admin",
   },
   {
     path: "/ordenes",
-    name: "Orden Producción",
+    name: "borradores----",
     icon: "nc-icon nc-bullet-list-67",
     component: UserProfile,
     layout: "/admin",
@@ -93,34 +102,6 @@ const dashboardRoutes = [
     name: "Table List",
     icon: "nc-icon nc-notes",
     component: TableList,
-    layout: "/admin",
-  },
-  {
-    path: "/administrarUsuarios",
-    name: "Administrar Usuarios",
-    icon: "nc-icon nc-paper-2",
-    component: administrarUsuarios,
-    layout: "/admin",
-  },
-  {
-    path: "/administrarConfigProductos",
-    name: "Configuracion de Productos",
-    icon: "nc-icon nc-paper-2",
-    component: administrarConfigProductos,
-    layout: "/admin",
-  },
-  {
-    path: "/CrearConfiguracion",
-    name: "Crear Configuracion",
-    icon: "nc-icon nc-paper-2",
-    component: CrearConfiguracion,
-    layout: "/admin",
-  },
-  {
-    path: "/admOrdenesProduccion",
-    name: "Administrar Ordenes de Producción",
-    icon: "nc-icon nc-paper-2",
-    component: admOrdenesProduccion,
     layout: "/admin",
   },
   {

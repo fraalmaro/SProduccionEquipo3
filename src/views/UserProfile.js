@@ -2,10 +2,12 @@ import React from "react";
 
 
 // react-bootstrap components
-import { Badge, Button, Card, Form, Navbar, Nav, Container, Row, Col, Dropdown
+import { Badge, Button, Card, Form, Navbar, Nav, Container, Row, Col, Dropdown, Modal
 } from "react-bootstrap";
 
 function User() {
+  const [showModal, setShowModal] = React.useState(false);
+
   return (
     <>
       <Container fluid>
@@ -152,14 +154,56 @@ function User() {
 
                       </Form.Group>
                     </Col>
-                  </Row>
-                  <Button
-                    className="btn-fill pull-right"
-                    type="submit"
-                    variant="info"
-                  >
-                    Guardar
-                  </Button>
+                    </Row>
+                    <Row>
+              <Col className="text-center" md="12">
+                <Button
+                  className="btn-fill btn-wd"
+                  variant="info"
+                  onClick={() => setShowModal(true)}
+                >
+                  Guardar Datos
+                </Button>
+              </Col>
+            </Row>
+                          {/* Mini Modal */}
+        <Modal
+          className="modal-mini modal-primary"
+          show={showModal}
+          onHide={() => setShowModal(false)}
+        >
+          <Modal.Header className="justify-content-center">
+            <div className="modal-profile">
+              <i className="nc-icon nc-bulb-63"></i>
+            </div>
+          </Modal.Header>
+          <Modal.Body className="text-center">
+            <p>¿Desea guardar los cambios realizados?</p>
+          </Modal.Body>
+          <div className="modal-footer">
+            <Button
+              className="btn-simple"
+              type="button"
+              variant="link"
+              onClick={() => setShowModal(false)}
+            >
+              Atras
+            </Button>
+            <Button
+              className="btn-simple"
+              type="button"
+              variant="link"
+              onClick={() => setShowModal(false)}
+            >
+              Guardar
+            </Button>
+          </div>
+        </Modal>
+        {/* End Modal */}
+
+
+
+
                   <div className="clearfix"></div>
                 </Form>
               </Card.Body>

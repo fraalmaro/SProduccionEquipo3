@@ -18,7 +18,8 @@
 import React, { Component } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
-import { Nav } from "react-bootstrap";
+import { Nav, Navbar, DropdownButton, ButtonGroup, Dropdown} from "react-bootstrap";
+import Submenu from "./subMenu";
 
 import logo from "assets/img/reactlogo.png";
 
@@ -54,27 +55,22 @@ function Sidebar({ color, image, routes }) {
           {routes.map((prop, key) => {
             if (!prop.redirect)
               return (
-                <li
-                  className={
-                    prop.upgrade
-                      ? "active active-pro"
-                      : activeRoute(prop.layout + prop.path)
-                  }
-                  key={key}
-                >
-                  <NavLink
-                    to={prop.layout + prop.path}
-                    className="nav-link"
-                    activeClassName="active"
-                  >
-                    <i className={prop.icon} />
-                    <p>{prop.name}</p>
-                  </NavLink>
+                <li className={ prop.upgrade? "active active-pro"
+                      : activeRoute(prop.layout + prop.path)} key={key}>
+                  
+                    <NavLink to={prop.layout + prop.path} className="nav-link"
+                      activeClassName="active">
+                      <i className={prop.icon} />
+                           <p>{prop.name}</p>    
+                           
+                          
+                    </NavLink>
                 </li>
               );
             return null;
           })}
         </Nav>
+          
       </div>
     </div>
   );
